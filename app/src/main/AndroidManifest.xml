@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.BilAsh">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/splashScreen">
+        <activity android:name="com.BilAsh.BookingAll" android:parentActivityName="com.flatondemand.user.com.BilAsh.app.Dash"></activity>
+        <activity android:name="com.BilAsh.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.BilAsh.Home"
+            android:theme="@style/splashScreen" />
+        <activity android:name="com.BilAsh.OTPVERIFY" />
+        <activity android:name="com.BilAsh.ProfileCreation" />
+        <activity
+            android:name="com.BilAsh.Dash"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.BilAsh.LocationSearch"
+            android:parentActivityName="com.BilAsh.Dash"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.BilAsh.SearchForProperty"
+            android:parentActivityName="com.BilAsh.LocationSearch"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.BilAsh.PropertySearch" />
+        <activity
+            android:name="com.BilAsh.PropertyView"
+            android:parentActivityName="com.BilAsh.SearchForProperty"
+            android:theme="@style/splashScreen" />
+        <activity
+            android:name="com.BilAsh.upload_documents"
+            android:parentActivityName="com.BilAsh.PropertyView"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.BilAsh.Payment"
+            android:parentActivityName="com.BilAsh.SearchForProperty"
+            android:theme="@style/AppTheme" />
+
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_ILgsfZCZoFIKMb" />
+    </application>
+
+</manifest>
